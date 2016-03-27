@@ -21,8 +21,9 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
+        String m = reader.readLine();
         int a = Integer.parseInt(s);
-        int b = Integer.parseInt(s);
+        int b = Integer.parseInt(m);
         if (a > 0 && b > 0) {
             System.out.println("1");
         } else if (a < 0 && b > 0) {
