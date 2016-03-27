@@ -1,5 +1,4 @@
 package com.javarush.test.level04.lesson06.task08;
-
 /* Координатные четверти
 Ввести с клавиатуры два целых числа, которые будут координатами точки, не лежащей на координатных осях OX и OY.
 Вывести на экран номер координатной четверти, в которой находится данная точка.
@@ -18,31 +17,20 @@ package com.javarush.test.level04.lesson06.task08;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int a = Integer.parseInt(reader.readLine());
-        int b = Integer.parseInt(reader.readLine());
-        int c = Integer.parseInt(reader.readLine());
+        String s = reader.readLine();
+        int a = Integer.parseInt(s);
+        int b = Integer.parseInt(s);
+        if (a > 0 && b > 0) {
+            System.out.println("1");
+        } else if (a < 0 && b > 0) {
+            System.out.println("2");
+        } else if (a < 0 && b < 0) {
+            System.out.println("3");
+        } else
+            System.out.println("4");
 
-        if ((a > b) && (a > c))
-        {
-            if (b > c) System.out.println(a + " " + b + " " + c);
-            else System.out.println(a + " " + c + " " + b);
-        }
-
-        if ((b > a) && (b > c))
-        {
-            if (a > c) System.out.println(b + " " + a + " " + c);
-            else System.out.println(b + " " + c + " " + a);
-        }
-
-        if ((c > a) && (c > b))
-        {
-            if (a > b) System.out.println(c + " " + a + " " + b);
-            else System.out.println(c + " " + b + " " + a);
-        }
     }
 }
