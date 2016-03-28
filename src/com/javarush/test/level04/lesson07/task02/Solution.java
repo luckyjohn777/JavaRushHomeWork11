@@ -15,11 +15,32 @@ package com.javarush.test.level04.lesson07.task02;
 нечетное двузначное число
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
-        //напишите тут ваш код
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String a = reader.readLine();
+        int c = Integer.parseInt(a);
+
+        if (c % 2 == 0 && c > 0 && c < 10) {
+            System.out.println("четное однозначное число");
+        }
+        if (c % 2 == 1 && c > 0 && c < 10) {
+            System.out.println("нечетное однозначное число");
+        }
+        if (c % 2 == 0 && c > 9 && c < 100) {
+            System.out.println("четное двузначное число");
+        }
+        if (c % 2 == 1 && c > 9 && c < 100) {
+            System.out.println("нечетное двузначное число");
+        }
+        if (c % 2 == 0 && c > 99 && c <= 999) {
+            System.out.println("четное трехзначное число");
+        }
+        if (c % 2 == 1 && c > 99 && c <= 999) {
+            System.out.println("нечетное трехзначное число");
+        }
     }
 }
