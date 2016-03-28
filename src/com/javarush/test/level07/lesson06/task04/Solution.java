@@ -15,8 +15,12 @@ public class Solution
     {
         ArrayList<String> list = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 5; i++) list.add(0, reader.readLine());
-        for (int i = 0; i < list.size(); i++) System.out.println(list.get(i));
+        for (int i = 0; i < 5; i++) {
+            list.add(0, reader.readLine());
+        }
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
 
     }
 }
